@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react'
 import SignUpForm from './SignUpForm';
-import Authenticate from '../Authenticate';
+import Authenticate from './Authenticate';
+import Reset from './Reset';
 
 function App() {
-const [token, setToken] = useState(null)
-  
-  
+  const [token, setToken] = useState(null)
+
+
   return (
     <>
-      <h1>Hi</h1>
-      <SignUpForm setToken = {setToken}/>
-      <Authenticate token ={token}/>
-      
+   
+    {
+      token? <Authenticate token={token} />:<SignUpForm setToken={setToken} />
+    }
+    <br/><br/>
+      <Reset setToken ={setToken}/>
+    
     </>
   )
 }

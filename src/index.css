@@ -1,5 +1,24 @@
 body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  display: flexbox;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
   background-color: black;
   color:antiquewhite;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  
+}
+button{
+  width: 200px;
+  background-color: antiquewhite;
+  font-size: 2cap;
+  border-radius: 10px;
+}
+input{
+  width: 200px;
+  height:30px;
+}
+#success{
+  color:#2fff4e;
 }
