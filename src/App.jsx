@@ -1,11 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import SignUpForm from './SignUpForm';
+import Authenticate from '../Authenticate';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+const [token, setToken] = useState(null)
+  
+  
   return (
     <>
       <h1>Hi</h1>
+      <SignUpForm setToken = {setToken}/>
+      <Authenticate token ={token}/>
+      
     </>
   )
 }
